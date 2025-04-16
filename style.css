@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     padding: 0;
@@ -7,15 +6,14 @@ body, html {
     color: white;
   }
   
-  body {
+body {
     background: url("background1.jpg") no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-
-  .overlay {
+.overlay {
     background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
     width: 100%;
@@ -23,32 +21,30 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
   }
   
-
-  .content {
+.content {
     max-width: 1000px;
   }
   
-  .content h1 {
+.content h1 {
     font-size: 3em;
     margin-bottom: 10px;
     color: #f8c94e;
   }
   
-  .content p {
+.content p {
     font-size: 1.2em;
     margin: 10px 0;
   }
   
-  .contact a {
+.contact a {
     color: #f8c94e;
     text-decoration: none;
     font-weight: bold;
   }
   
-  .contact a:hover {
+.contact a:hover {
     text-decoration: underline;
   }
   
