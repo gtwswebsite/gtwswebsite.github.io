@@ -1,20 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTWS - Coming Soon</title>
+  <title>GTWS Stucco</title>
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="overlay">
-    <div class="content">
-      <h1>Green Technology Wall System</h1>
-      <p>Our new website is under construction. 🚧</p>
-      <p>Coming soon to serve you better!</p>
-      <p class="contact">Contact: <a href="mailto:info@gtws.ca">greentechwallsystem@gmail.com</a></p>
+
+  <header>
+    <h1>Green Technology Wall System</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#" class="contact-btn">Contact</a>
+    </nav>
+    <div class="popup-container">
+      <div class="popup-box">
+        <h1>Contact</h1>
+        <p>Phone: +1 (416) 271-1566</p>
+        <p>Email: greentechwallsystem@gmail.com</p>
+        <p> &nbsp; </p>
+        <p>Hours: </p>
+        <p>Monday: 7:30am - 5pm</p>
+        <p>Tuesday: 7:30am - 5pm</p>
+        <p>Wednesday: 7:30am - 5pm</p>
+        <p>Thursday: 7:30am - 5pm</p>
+        <p>Friday: 7:30am - 5pm</p>
+        <p>Saturday: Closed</p>
+        <p>Sunday: Closed</p> 
+        <button class="close-btn">Done</button>
+      </div>
     </div>
+  </header>
+
+  <section id="services" class="section">
+
+    <h1>Services</h1>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <img src="images/2024-10-29.jpg" alt="Commercial Stucco">
+        <div class="text">
+          <h3>Commercial Stucco</h3>
+          <p>Large-scale work for commercial properties.</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <img src="images/2020-09-16.jpg" alt="Residential Stucco">
+        <div class="text">
+          <h3>Residential Stucco</h3>
+          <p>High quality finishes for your home exterior.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="section gallery-section">
+    <h1>Our Work</h1>
+
+    <div class="gallery horizontal">
+      <img src="images/2020-09-16.jpg" alt="Project 1" class="gallery-img">
+      <img src="images/2021-12-22.jpg" alt="Project 2" class="gallery-img">
+      <img src="images/2024-05-15.jpg" alt="Project 3" class="gallery-img">
+      <img src="images/2024-10-29.jpg" alt="Project 4" class="gallery-img">
+      <img src="images/unnamed.jpg" alt="Project 5" class="gallery-img">
+      <img src="images/hero.jpg" alt="Project 6" class="gallery-img">
+    </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Call us: (416) 271-1566</p>
+    <p>Email: info@gtws.ca</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
   </div>
 </body>
+
 </html>
