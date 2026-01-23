@@ -1,50 +1,214 @@
-body, html {
+  body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    /*background-color: #127933;*/
+    background-image: url("images/header.png");
     color: white;
   }
-  
-body {
-    background: url("background1.jpg") no-repeat center center/cover;
+
+  nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 16px;
   }
-  
-.overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    width: 100%;
+
+  nav a:not(:first-child)::before {
+    content: "|";
+    margin-right: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* SERVICES */
+  .section {
+    padding: 60px 40px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .service {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
   }
-  
-.content {
-    max-width: 1000px;
+
+  .service img {
+    width: 400px;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
-  
-.content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #f8c94e;
+
+  .service img:hover {
+    transform: scale(1.05);
   }
-  
-.content p {
-    font-size: 1.2em;
-    margin: 10px 0;
+
+  .text {
+    margin-top: 20px;
+    max-width: 400px;
   }
-  
-.contact a {
-    color: #f8c94e;
-    text-decoration: none;
-    font-weight: bold;
+
+  h1 {
+    text-align: center;
   }
-  
-.contact a:hover {
-    text-decoration: underline;
+
+  @media (max-width: 900px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
   }
-  
+
+
+  /* POPUP BUTTON */
+  .show-popup {
+    margin: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* POPUP OVERLAY */
+  .popup-container {
+    position: fixed;
+    /* ✅ important */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* POPUP BOX */
+  .popup-box {
+    background: rgb(57, 168, 57);
+    color: rgb(230, 230, 230);
+    padding: 30px;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+  }
+
+  /* Horizontal gallery */
+  .gallery.horizontal {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  /* Hide scrollbar (optional but nice) */
+  .gallery.horizontal::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .gallery.horizontal::-webkit-scrollbar-thumb {
+    background: #127933;
+    border-radius: 4px;
+  }
+
+  /* Gallery images */
+  .gallery.horizontal img {
+    min-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery.horizontal img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Gallery images */
+  .gallery-img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Lightbox overlay */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Lightbox image */
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+
+  /* Close button */
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
