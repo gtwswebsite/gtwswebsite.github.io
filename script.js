@@ -30,3 +30,25 @@ lightbox.addEventListener("click", (e) => {
     lightbox.style.display = "none";
   }
 });
+
+document.querySelectorAll(".lightbox-trigger").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add("active");
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+document.querySelectorAll(".popup-img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add("show");
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.classList.remove("show");
+});
