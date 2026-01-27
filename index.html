@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>GTWS Stucco</title>
 
@@ -12,9 +13,13 @@
 <body>
 
   <header>
-    <h1>Green Technology Wall System</h1>
+    <h1 class="site-title">
+      <span class="top">Green Tech</span>
+      <span class="bottom">Wall Systems</span>
+    </h1>
     <nav>
       <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
       <a href="#" class="contact-btn">Contact</a>
     </nav>
     <div class="popup-container">
@@ -30,11 +35,26 @@
         <p>Thursday: 7:30am - 5pm</p>
         <p>Friday: 7:30am - 5pm</p>
         <p>Saturday: Closed</p>
-        <p>Sunday: Closed</p> 
-        <button class="close-btn">Close</button>
+        <p>Sunday: Closed</p>
+        <button class="close-btn">Done</button>
       </div>
     </div>
   </header>
+
+  <section id="where" class="where-section">
+    <div class="gta-box">
+      <section class="hero">
+        <div class="hero-overlay">
+          <h2>Stucco in Southern Ontario</h2>
+          <p>
+            Green Technology Wall Systems proudly provides professional stucco
+            services in Angus, Alliston, Barrie, and Toronto.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
 
   <section id="services" class="section">
 
@@ -61,31 +81,34 @@
     </div>
 
   </section>
-  <section class="section gallery-section">
-    <h1>Our Work</h1>
 
-    <div class="gallery horizontal">
-      <img src="images/2020-09-16.jpg" alt="Project 1" class="gallery-img">
-      <img src="images/2021-12-22.jpg" alt="Project 2" class="gallery-img">
-      <img src="images/2024-05-15.jpg" alt="Project 3" class="gallery-img">
-      <img src="images/2024-10-29.jpg" alt="Project 4" class="gallery-img">
-      <img src="images/unnamed.jpg" alt="Project 5" class="gallery-img">
-      <img src="images/hero.jpg" alt="Project 6" class="gallery-img">
-    </div>
-    </div>
+  <section id="gallery">
+    <section class="section gallery-section">
+      <h1>Our Work</h1>
+
+      <div class="gallery horizontal">
+        <img src="images/2020-09-16.jpg" alt="Project 1" class="gallery-img" class="lightbox-trigger" class="popup-img">
+        <img src="images/2021-12-22.jpg" alt="Project 2" class="gallery-img" class="lightbox-trigger" class="popup-img">
+        <img src="images/2024-05-15.jpg" alt="Project 3" class="gallery-img" class="lightbox-trigger" class="popup-img">
+        <img src="images/2024-10-29.jpg" alt="Project 4" class="gallery-img" class="lightbox-trigger" class="popup-img">
+        <img src="images/unnamed.jpg" alt="Project 5" class="gallery-img" class="lightbox-trigger" class="popup-img">
+        <img src="images/hero.jpg" alt="Project 6" class="gallery-img" class="lightbox-trigger" class="popup-img">
+      </div>
+      </div>
+    </section>
   </section>
 
   <footer id="contact">
     <p>Call us: (416) 271-1566</p>
-    <p>Email: greentechwallsystem@gmail.com</p>
+    <p>Email: info@gtws.ca</p>
   </footer>
 
   <script src="script.js"></script>
-  <!-- Lightbox -->
+  
   <div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
-    <img id="lightbox-img">
+    <img id="lightbox-img" src="" alt="Expanded view">
   </div>
+
 </body>
 
 </html>
