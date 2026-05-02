@@ -15,6 +15,7 @@ popupCloseBtn.addEventListener("click", () => {
 // IMAGE LIGHTBOX
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
 const galleryImages = document.querySelectorAll(".gallery-img");
 
 galleryImages.forEach(img => {
@@ -26,4 +27,14 @@ galleryImages.forEach(img => {
 
 lightbox.addEventListener("click", () => {
   lightbox.classList.remove("show");
+});
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+}
+
+lightboxImg.addEventListener("click", (event) => {
+  event.stopPropagation();
 });
